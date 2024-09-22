@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/constanse.dart';
 import 'package:notes_app/widgets/custom_add_note_button.dart';
-import 'package:notes_app/widgets/notes.view.dart';
+import 'package:notes_app/widgets/custom_notes.view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -24,7 +24,7 @@ class HomeView extends StatelessWidget {
           color: Colors.black,
         ),
       ),
-      body: const NotesView(),
+      body: const CustomNotesView(),
     );
   }
 }
