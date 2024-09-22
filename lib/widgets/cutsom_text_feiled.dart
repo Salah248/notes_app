@@ -7,15 +7,18 @@ class CustomTextFeild extends StatelessWidget {
     this.hintText,
     this.onChanged,
     this.contentPadding,
+    this.maxLines = 1,
   });
   Function(String)? onChanged;
   String? hintText;
+  final int maxLines;
 
   EdgeInsetsGeometry? contentPadding;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      maxLines: maxLines,
       style: const TextStyle(color: Colors.white),
       onChanged: onChanged,
       decoration: InputDecoration(
@@ -28,7 +31,9 @@ class CustomTextFeild extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
         ),
         hintText: '$hintText',
-        hintStyle: const TextStyle(color: Color(0xff62FCD7)),
+        hintStyle: const TextStyle(
+          color: Color(0xff62FCD7),
+        ),
       ),
     );
   }

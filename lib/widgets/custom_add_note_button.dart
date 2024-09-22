@@ -12,28 +12,31 @@ class AddNoteButton extends StatelessWidget {
         left: 16,
         right: 16,
       ),
-      child: Column(
-        children: [
-          const SizedBox(
-            height: 30,
-          ),
-          CustomTextFeild(
-            hintText: 'Title',
-          ),
-          const SizedBox(height: 15),
-          CustomTextFeild(
-            contentPadding:
-                const EdgeInsets.symmetric(vertical: 60, horizontal: 10),
-            onChanged: (p0) {},
-            hintText: 'Content',
-          ),
-          const SizedBox(
-            height: 100,
-          ),
-          CustomButton(
-            text: 'Add',
-          )
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 30,
+            ),
+            CustomTextFeild(
+              hintText: 'Title',
+            ),
+            const SizedBox(height: 15),
+            CustomTextFeild(
+              maxLines: 5,
+              hintText: 'Content',
+            ),
+            const SizedBox(
+              height: 100,
+            ),
+            CustomButton(
+              text: 'Add',
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+          ],
+        ),
       ),
     );
   }
