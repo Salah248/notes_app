@@ -1,40 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/constanse.dart';
 
-// ignore: must_be_immutable
 class CustomTextFeild extends StatelessWidget {
-  CustomTextFeild({
+  const CustomTextFeild({
     super.key,
-    this.hintText,
-    this.onChanged,
-    this.contentPadding,
+    required this.hintText,
     this.maxLines = 1,
   });
-  Function(String)? onChanged;
-  String? hintText;
+  final String hintText;
   final int maxLines;
-
-  EdgeInsetsGeometry? contentPadding;
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      maxLines: maxLines,
-      style: const TextStyle(color: Colors.white),
-      onChanged: onChanged,
-      decoration: InputDecoration(
-        contentPadding: contentPadding,
-        focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: const BorderSide(color: Colors.blue)),
-        enabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: Colors.white),
-          borderRadius: BorderRadius.circular(8),
-        ),
-        hintText: '$hintText',
-        hintStyle: const TextStyle(
-          color: Color(0xff62FCD7),
+    return Material(
+      child: TextField(
+        cursorColor: kPraimaryColor,
+        maxLines: maxLines,
+        style: const TextStyle(color: Colors.white),
+        decoration: InputDecoration(
+          border: buildBorder(),
+          focusedBorder: buildBorder(color: kPraimaryColor),
+          enabledBorder: buildBorder(),
+          hintText: hintText,
+          hintStyle: const TextStyle(color: kPraimaryColor),
         ),
       ),
     );
+  }
+
+  OutlineInputBorder buildBorder({color}) {
+    return OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8),
+        borderSide: BorderSide(color: color ?? Colors.white));
   }
 }

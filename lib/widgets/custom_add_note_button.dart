@@ -18,11 +18,11 @@ class AddNoteButton extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            CustomTextFeild(
+            const CustomTextFeild(
               hintText: 'Title',
             ),
             const SizedBox(height: 15),
-            CustomTextFeild(
+            const CustomTextFeild(
               maxLines: 5,
               hintText: 'Content',
             ),
