@@ -59,7 +59,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
             hintText: 'Content',
           ),
           const SizedBox(
-            height: 100,
+            height: 50,
           ),
           CustomButton(
             onTap: () {
@@ -73,7 +73,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
             text: 'Add',
           ),
           const SizedBox(
-            height: 20,
+            height: 40,
           ),
         ],
       ),
