@@ -6,3 +6,5 @@ sealed class NotesState {}
 final class NotescubitInitial extends NotesState {}
 
 final class NotesLoaded extends NotesState {}
+
+final class NotesSuccess extends NotesState {}
