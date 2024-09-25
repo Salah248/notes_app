@@ -11,7 +11,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => NotescubitCubit(),
+      create: (context) => NotesCubit(),
       child: Scaffold(
         floatingActionButton: FloatingActionButton(
           backgroundColor: kPraimaryColor,
