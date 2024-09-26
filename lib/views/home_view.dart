@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_app/constanse.dart';
-import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
 import 'package:notes_app/widgets/custom_add_note_button.dart';
 import 'package:notes_app/widgets/custom_notes.view.dart';
 
@@ -27,7 +25,7 @@ class HomeView extends StatelessWidget {
           color: Colors.black,
         ),
       ),
-      body: const CustomNotesView(),
+      body: const CustomNotesViewBody(),
     );
   }
 }

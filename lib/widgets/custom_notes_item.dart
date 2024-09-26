@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
-import 'package:notes_app/widgets/custom_edit_note_view.dart';
+import 'package:notes_app/views/edit_note_view.dart';
 
 class CustomNotesItem extends StatelessWidget {
   const CustomNotesItem({
@@ -19,7 +19,9 @@ class CustomNotesItem extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return const CustomEditNoteViewBody();
+              return EditNoteView(
+                note: note,
+              );
             },
           ),
         );
@@ -39,7 +41,7 @@ class CustomNotesItem extends StatelessWidget {
           children: [
             ListTile(
               title: Text(
-                note.title,
+                note.modelTitle,
                 style: const TextStyle(
                   color: Colors.black,
                   fontSize: 26,
@@ -48,7 +50,7 @@ class CustomNotesItem extends StatelessWidget {
               subtitle: Padding(
                 padding: const EdgeInsets.only(top: 16, bottom: 16),
                 child: Text(
-                  note.supTitle,
+                  note.modelSupTitle,
                   style: TextStyle(
                     color: Colors.black.withOpacity(.5),
                     fontSize: 18,
